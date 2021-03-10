@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> DanH SÁcH</title>
+</head>
+<body>
+<P id="op"></P>
+</body>
+</html>
+<script>
+    let a = parseInt(prompt('nhập liệu'));
+    switch (a) {
+        case 10:
+            document.getElementById('op').innerHTML = 'số đẹp'
+            break
+        case '':
+            document.getElementById('op').innerHTML = 'nhập dữ liệu vào đi'
+            break
+        default: document.getElementById('op').innerHTML = 'nhập sai hết rồi, cho nhập lại'
+    }
+</script>
