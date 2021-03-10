@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch Tính Năm nhuận</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input id="ac"></td>
+        <td><input type="button" onclick="a1()" value="tính thử"></td>
+    </tr>
+    <tr>
+        <p id="uc"></p>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+function a1() {
+    let year = document.getElementById('ac').value;
+    let isLeapYear = false;
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    }
+
+    if (isLeapYear) {
+        document.getElementById('uc').innerHTML = year + " is a leap year"
+    } else {
+        document.getElementById('uc').innerHTML = year + " is NOT a leap year"
+    }
+}
+</script>
