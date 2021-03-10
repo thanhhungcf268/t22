@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="border: 2px solid black; width: 300px;height: 300px;text-align: center; color: blue" cellpadding="10px"cellspacing="10px;">
+    <tr style="border: none">
+        <td></td>
+        <td colspan="4">CASIO</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="4" style="border: 1px solid black; width: 170px; height:25px;" id="qq"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="border: solid black" onclick="number(1)">1</td>
+        <td style="border: solid black" onclick="number(2)">2</td>
+        <td style="border: solid black" onclick="number(3)">3</td>
+        <td style="border: solid black" onclick="number('+')">+</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="border: solid black" onclick="number(4)">4</td>
+        <td style="border: solid black" onclick="number(5)">5</td>
+        <td style="border: solid black" onclick="number(6)">6</td>
+        <td style="border: solid black" onclick="number('-')">-</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="border: solid black" onclick="number(7)">7</td>
+        <td style="border: solid black" onclick="number(8)">8</td>
+        <td style="border: solid black" onclick="number(9)">9</td>
+        <td style="border: solid black" onclick="number('*')">*</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="border: solid black; color: red" onclick="reset('C')">C</td>
+        <td style="border: solid black" onclick="number(0)">0</td>
+        <td style="border: solid black" onclick="result('=')">=</td>
+        <td style="border: solid black" onclick="number('/')">/</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</table>
+</body>
+</html>
+<script>
+    function number(value) {
+        document.getElementById('qq').innerHTML += value;
+    }
+    function result() {
+        document.getElementById('qq').innerHTML = eval(document.getElementById('qq').innerHTML);
+    }
+    function reset() {
+        document.getElementById('qq').innerHTML = '';
+    }
+</script>
